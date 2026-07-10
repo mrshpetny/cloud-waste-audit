@@ -1,26 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
   <!-- Dark gray squircle background -->
-  <rect
-    x="0"
-    y="0"
-    width="1024"
-    height="1024"
-    rx="170"
-    ry="170"
-    fill="#2F2F31"
-  />
+  <rect x="0" y="0" width="1024" height="1024" rx="170" ry="170" fill="#2F2F31" />
 
-  <!-- MS lettering -->
-  <text
-    x="512"
-    y="610"
-    text-anchor="middle"
-    dominant-baseline="middle"
-    fill="#FFFFFF"
-    font-family="Inter, Helvetica, Arial, sans-serif"
-    font-size="520"
-    font-weight="900"
-    letter-spacing="-20">
-    MS
-  </text>
+  <!-- Corrected, perfectly sized and centered M path -->
+  <path fill="#FFFFFF" d="
+    M 160 400
+    L 160 780
+    L 210 780
+    L 210 490
+    L 400 660
+    L 590 490
+    L 590 780
+    L 640 780
+    L 640 400
+    L 590 400
+    L 400 560
+    L 210 400
+    Z
+  " />
+
+  <!-- Existing, geometrically precise S path -->
+  <path fill="#FFFFFF" d="
+    M 720 520
+    C 720 480 760 440 840 440
+    C 920 440 960 480 960 520
+    C 960 560 920 580 840 580
+    C 760 580 720 620 720 680
+    C 720 740 760 780 840 780
+    C 920 780 960 740 960 700
+    L 920 660
+    C 920 680 880 700 840 700
+    C 800 700 780 680 780 660
+    C 780 640 800 620 840 620
+    C 920 620 960 580 960 520
+    C 960 460 920 400 840 400
+    C 760 400 720 460 720 520
+    Z
+  " />
 </svg>
