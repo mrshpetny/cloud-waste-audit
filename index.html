@@ -227,9 +227,63 @@
             </div>
         </div>
 
-        <!-- 1. PROTOCOL -->
+        <!-- 1. HEADLINE -->
+        <div class="section" style="margin-bottom: 2.5rem;">
+            <p style="font-size: 1.2rem; font-weight: 600; color: #0b1f33; margin: 0 0 0.4rem 0; line-height: 1.3;">
+                Save ~$14,232 per year (typical) – guaranteed $6,000/year.
+            </p>
+            <p style="font-size: 0.9rem; color: #4b5563; margin: 0;">
+                You only pay if we find waste.
+            </p>
+        </div>
+
+        <!-- 2. DELIVERY & OUTCOME -->
         <div class="section">
-            <div class="section-title">CLOUD WASTE AUDIT</div>
+            <div class="section-title">Service & Outcome</div>
+             <p style="margin-top: 1rem; margin-bottom: 0.2rem; font-size: 0.95rem;"><strong>We provide AWS infrastructure waste audit:</strong></p>
+            <ul>
+                <li>Forensic report detailing <strong>monthly waste</strong> (e.g., ~$1,186/mo) identified across scoped AWS services including EC2, EBS, S3, RDS, ALB, NAT, VPC and CloudWatch.</li>
+                <li>Pre-written CLI commands <strong>to verify and remove this waste</strong> for your dev team. No infrastructure changes, only terminal execution.</li>
+                <li><strong>Typical savings:</strong> ~<strong>$14,232</strong> per year (found across recurring waste patterns in standard AWS accounts).</li>
+                <li><strong>Guaranteed P&L improvement</strong>: <strong>$6,000</strong> per year (annualized from guaranteed identification of $500/month waste).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Guarantee</div>
+            <div style="color: #1f2937; line-height: 1.6; margin: 0;">
+                <p style="margin: 0; font-size: 0.95rem;">
+                    <strong style="color: #0b1f33;">At least $500 per month waste found across the scoped services.</strong> If not identified, the full fee is refunded automatically via USDT (TRC-20) within 5 business days.
+                </p>
+            </div>
+        </div>
+
+        <!-- 4. WASTE PROFILE -->
+        <div class="section">
+            <div class="section-title">Waste Findings</div>
+            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.5rem;">
+                Typical recurring waste patterns we found in standard AWS accounts ($10k–$15k monthly spend).<br>
+            </p>
+               <table class="diagnostic-table">
+                <tr><td class="label">Idle EC2 Instances (3x t3.medium, running 24/7, &lt;5% CPU)</td><td class="value">$351.36/mo</td></tr>
+                <tr><td class="label">Unattached EBS Volumes (5x gp3 500GB, no Attachment)</td><td class="value">$192.50/mo</td></tr>
+                <tr><td class="label">Idle NAT Gateway (1x, &lt;50 MB outbound)</td><td class="value">$37.20/mo</td></tr>
+                <tr><td class="label">Over‑provisioned RDS (db.m5.large, CPU &lt;10%, 300GB gp3)</td><td class="value">$199.84/mo</td></tr>
+                <tr><td class="label">Orphaned Snapshots (Age &gt; 60 days, 1.45TB total)</td><td class="value">$74.52/mo</td></tr>
+                <tr><td class="label">Unused Elastic IPs (3x, no attachment)</td><td class="value">$10.80/mo</td></tr>
+                <tr><td class="label">Idle ALB (Application Load Balancer, no traffic, 1x)</td><td class="value">$117.60/mo</td></tr>
+                <tr><td class="label">Unused CloudWatch Logs (retention &gt; 30 days, 120GB storage)</td><td class="value">$48.40/mo</td></tr>
+                <tr><td class="label">Underutilized EBS‑optimized instances (2x m5.large, &lt;20% utilization)</td><td class="value">$153.80/mo</td></tr>
+                <tr class="total-row"><td class="label">Total potential savings (typical)</td><td class="value">~$1,186/mo</td></tr>
+            </table>
+            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.8rem;">
+                Waste is defined as idle, unattached, over‑provisioned, or unused resources that do not deliver business value. The table above shows typical findings of such waste.
+            </p>
+        </div>
+
+        <!-- 5. PROTOCOL -->
+        <div class="section">
+            <div class="section-title">ENGAGEMENT PROTOCOL</div>
             <ul class="process-list">
                 <li>
                     <span class="step">01.</span>
@@ -262,57 +316,17 @@
                     <span class="content"><strong>Receive the Report</strong><br>The final report is delivered within 72 hours.</span>
                 </li>
             </ul>
-            <!-- Consolidated Conditions -->
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #f0f0f0; font-size: 0.9rem; color: #4b5563; line-height: 1.6;">
-                <strong style="color: #1f2937;">Timeline &amp; Conditions:</strong><br>
+        </div>
+
+        <!-- 6. TIMELINE & CONDITIONS (FINE PRINT AT BOTTOM) -->
+        <div class="section" style="margin-bottom: 0;">
+            <div class="section-title">Timeline &amp; Conditions</div>
+            <div style="font-size: 0.9rem; color: #4b5563; line-height: 1.6;">
                 Free cancellation is available for 24 hours after signing for a full refund. Read‑only access must be provided within 3 business days of signing; otherwise, engagement terminates and fee retained. The 72‑hour delivery starts after valid access and the cancellation window expiry. Data is permanently deleted within 7 days of report delivery.
             </div>
         </div>
 
-        <!-- 2. DELIVERY & OUTCOME (FINAL) -->
-        <div class="section">
-            <div class="section-title">Delivery &amp; Outcome</div>
-            <p style="margin-top: 1rem; margin-bottom: 0.2rem;"><strong>AWS infrastructure waste audit delivered within 72 hours:</strong></p>
-            <ul>
-                <li>Forensic report detailing <strong>monthly waste</strong> (e.g., ~$1,186/mo) identified across scoped AWS services including EC2, EBS, S3, RDS, ALB, NAT, VPC and CloudWatch.</li>
-                <li>Pre‑written CLI commands as <strong>copy‑paste executable blocks</strong> for your dev team. No infrastructure changes, only terminal execution.</li>
-                <li><strong>Typical savings:</strong> ~<strong>$14,232</strong> per year (found across recurring waste patterns in standard AWS accounts).</li>
-                <li><strong>Guaranteed P&L improvement</strong>: <strong>$6,000</strong> per year (annualized from guaranteed identification of $500/month waste).</li>
-            </ul>
-        </div>
-
-        <!-- 3. GUARANTEE -->
-        <div class="section">
-            <div class="section-title">Guarantee</div>
-            <div style="color: #1f2937; line-height: 1.6; margin: 0;">
-                <p style="margin: 0 0 0.2rem 0;">
-                    <strong style="color: #0b1f33;">At least $500 per month waste found across the scoped services.</strong> If not identified, the full fee is refunded automatically via USDT (TRC-20) within 5 business days.
-                </p>
-            </div>
-        </div>
-
-        <!-- 4. DIAGNOSTIC ANATOMY -->
-        <div class="section">
-            <div class="section-title">Waste Profile</div>
-            <div class="fine-print" style="margin-bottom: 0.3rem;">Typical waste anatomy ($10k–$15k per month AWS bill)</div>
-            <table class="diagnostic-table">
-                <tr><td class="label">Idle EC2 Instances (3x t3.medium, running 24/7, &lt;5% CPU)</td><td class="value">$351.36/mo</td></tr>
-                <tr><td class="label">Unattached EBS Volumes (5x gp3 500GB, no Attachment)</td><td class="value">$192.50/mo</td></tr>
-                <tr><td class="label">Idle NAT Gateway (1x, &lt;50 MB outbound)</td><td class="value">$37.20/mo</td></tr>
-                <tr><td class="label">Over‑provisioned RDS (db.m5.large, CPU &lt;10%, 300GB gp3)</td><td class="value">$199.84/mo</td></tr>
-                <tr><td class="label">Orphaned Snapshots (Age &gt; 60 days, 1.45TB total)</td><td class="value">$74.52/mo</td></tr>
-                <tr><td class="label">Unused Elastic IPs (3x, no attachment)</td><td class="value">$10.80/mo</td></tr>
-                <tr><td class="label">Idle ALB (Application Load Balancer, no traffic, 1x)</td><td class="value">$117.60/mo</td></tr>
-                <tr><td class="label">Unused CloudWatch Logs (retention &gt; 30 days, 120GB storage)</td><td class="value">$48.40/mo</td></tr>
-                <tr><td class="label">Underutilized EBS‑optimized instances (2x m5.large, &lt;20% utilization)</td><td class="value">$153.80/mo</td></tr>
-                <tr class="total-row"><td class="label">Total potential savings (typical)</td><td class="value">~$1,186/mo</td></tr>
-            </table>    
-            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.8rem;">
-                Resources are considered waste when they are idle, unattached, over‑provisioned, or unused.
-                The table above shows recurring waste patterns found in standard AWS accounts.
-            </p>
-        </div>
-
+        
         <!-- FOOTER -->
         <div class="footer">
             <div>
