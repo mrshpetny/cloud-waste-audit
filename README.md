@@ -1,5 +1,7 @@
-# Stop burning an extra ~$14,232 a year on AWS
+# Mr. Shpetny – Executive Audit Engagements
 
-**Up to 20% of our AWS bills are pure waste.** Idle servers, unattached storage, over‑provisioned compute – they burn capital every month, invisible, delivering zero value. We pay for nothing and can't see it. Developers fear breaking things – it keeps waste untouched. We give you a risk‑free audit and removal commands – all `--dry-run` verifiable, so you can preview and safely execute the changes. Stop the bleeding today.
+### Stop burning an extra ~$14,232 a year on AWS
 
-[https://mrshpetny.com/](https://mrshpetny.com/)
+**Up to 20% of our AWS bills are pure waste.** Idle servers, unattached storage, over‑provisioned compute – they burn capital every month, invisible, delivering zero value. We pay for nothing and can't see it. Developers fear breaking things – it keeps waste untouched. We give you a risk‑free audit and removal commands – all --dry-run verifiable, so you can preview the changes and safely execute them. Stop the bleeding today.
+
+[mrshpetny.com](https://mrshpetny.com)
