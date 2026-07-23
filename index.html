@@ -137,14 +137,14 @@
             padding: 0;
             margin: 1.2rem 0 0.5rem;
         }
-        .process-list > li {
+        .process-list li {
             display: flex;
             gap: 1rem;
             padding: 0.7rem 0;
             border-bottom: 1px solid #f0f0f0;
             align-items: flex-start;
         }
-        .process-list > li:last-child { border-bottom: none; }
+        .process-list li:last-child { border-bottom: none; }
         .process-list .step {
             font-weight: 600;
             color: #0b1f33;
@@ -152,27 +152,12 @@
             font-size: 0.95rem;
         }
         .process-list .content {
-            color: #374151; /* Changed from #4b5563 */
+            color: #4b5563;
             font-size: 0.95rem;
         }
         .process-list .content strong {
             font-weight: 600;
             color: #1f2937;
-        }
-
-        .diagnostic-table .label {
-            color: #374151; /* Changed from #1f2937 */
-        }
-
-        .questions_ul {
-            color: #374151;
-        }
-        .questions_ul li::before {
-            content: "·";
-            position: absolute;
-            left: 0;
-            color: #374151;
-            font-weight: 700;
         }
 
         /* -- Diagnostic Table -- */
@@ -247,15 +232,15 @@
                 Stop burning an extra ~$14,232 a year on AWS
             </p>
             <p style="font-size: 0.85rem; color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.05rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
                     Principal‑led boutique firm
                 </span>
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.05rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
                     No calls, email only
                 </span>
             </p>
             <p style="font-size: 0.85rem; color: #4b5563; margin: 0.4rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.05rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
                     $6,000 a year waste found or audit is free
                 </span>
             </p>
@@ -298,7 +283,7 @@
         <!-- 5. WASTE FINDINGS -->
         <div class="section">
             <div class="section-title">Waste Findings</div>
-            <p style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.5rem;">
                 What we typically find across standard AWS environments ($10k–$15k monthly spend).
             </p>
             <table class="diagnostic-table">
@@ -313,7 +298,7 @@
                 <tr><td class="label">Underutilized EBS‑optimized instances (2x m5.large, &lt;20% utilization)</td><td class="value">$153.80/mo</td></tr>
                 <tr class="total-row"><td class="label">Savings per audit (typical)</td><td class="value">~$1,186/mo</td></tr>
             </table>
-            <p style="font-size: 0.9rem; color: #374151; margin-bottom: 0.8rem;">
+            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.8rem;">
                 The table above represents typical waste patterns we have observed across multiple audits. Actual savings will be based on your defined scope and detailed in your custom report.
             </p>
         </div>
@@ -325,16 +310,23 @@
                 <li>
                     <span class="step">01.</span>
                     <span class="content">
-                        <strong>Initiate Qualification</strong>
-                        <ul class="questions_ul"><li>1. Monthly AWS spend? (e.g., $15k/mo)</li><li>2. Any specific AWS pain points? (e.g., idle EC2, EBS)</li></ul>
-                        <div style="margin-top: 0.3rem;">
-                            <strong>Reply with "Audit" to </strong>
-                            <span style="font-family: monospace; background: #f3f4f6; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.85rem;">
-                                <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
-                            </span>
+                        <strong>Initiate Qualification</strong><br>
+                        <div style="border-left: 2px solid #e5e7eb; padding-left: 1rem; margin-top: 0.3rem;">
+                            <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.3rem; font-size: 0.95rem; align-items: baseline; line-height: 1.6;">
+                                <span>1.</span>
+                                <span>Monthly AWS spend? (e.g., $15k/mo)</span>
+                                <span>2.</span>
+                                <span>Any specific AWS pain points? (e.g., idle EC2, EBS)</span>
+                            </div>
+                            <!-- Section 2: Action -->
+                            <div style="margin-top: 0.4rem; font-size: 0.95rem;">
+                                Send "Audit" to <span style="font-family: monospace; background: #f3f4f6; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.85rem;">
+                                    <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
+                                </span>
+                            </div>
                         </div>
                     </span>
-                </li>  
+                </li>
                 <li>
                     <span class="step">02.</span>
                     <span class="content"><strong>Confirm the Scope</strong><br>Reply to the scope questions.</span>
@@ -358,13 +350,14 @@
             </ul>
         </div>
 
-        <!-- 7. TIMELINE & CONDITIONS -->
+        <!-- 7. TIMELINE & CONDITIONS (FINE PRINT AT BOTTOM) -->
         <div class="section" style="margin-bottom: 0;">
             <div class="section-title">Timeline &amp; Conditions</div>
-            <div style="font-size: 0.9rem; color: #374151; line-height: 1.6;">
+            <div style="font-size: 0.9rem; color: #4b5563; line-height: 1.6;">
                 Free cancellation is available for 24 hours after signing for a full refund. Read‑only access must be provided within 3 business days of signing; otherwise, engagement terminates and fee retained. The 72‑hour delivery starts after valid access and the cancellation window expiry. Data is permanently deleted within 7 days of report delivery.
             </div>
         </div>
+
         
         <!-- FOOTER -->
         <div class="footer">
