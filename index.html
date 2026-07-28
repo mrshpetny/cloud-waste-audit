@@ -296,16 +296,17 @@
                 What we typically find across standard AWS environments ($15k–$50k monthly spend).
             </p>
             <table class="diagnostic-table">
-                <tr><td class="label">Idle EC2 Instances (5x t3.medium, running 24/7, &lt;5% CPU)</td><td class="value">$585.60/mo</td></tr>
-                <tr><td class="label">Unattached EBS Volumes (8x gp3 500GB, no Attachment)</td><td class="value">$308.00/mo</td></tr>
+                <tr><td class="label">Idle EC2 Instances (6x t3.medium, running 24/7, &lt;5% CPU)</td><td class="value">$702.72/mo</td></tr>
+                <tr><td class="label">Unattached EBS Volumes (10x gp3 500GB, no Attachment)</td><td class="value">$385.00/mo</td></tr>
                 <tr><td class="label">Idle NAT Gateway (2x, &lt;50 MB outbound)</td><td class="value">$74.40/mo</td></tr>
                 <tr><td class="label">Over‑provisioned RDS (db.m5.large, CPU &lt;10%, 300GB gp3)</td><td class="value">$199.84/mo</td></tr>
-                <tr><td class="label">Orphaned Snapshots (Age &gt; 60 days, 1.45TB total)</td><td class="value">$74.52/mo</td></tr>
-                <tr><td class="label">Unused Elastic IPs (4x, no attachment)</td><td class="value">$14.40/mo</td></tr>
-                <tr><td class="label">Idle ALB (Application Load Balancer, no traffic, 2x)</td><td class="value">$235.20/mo</td></tr>
-                <tr><td class="label">Unused CloudWatch Logs (retention &gt; 30 days, 200GB storage)</td><td class="value">$80.67/mo</td></tr>
-                <tr><td class="label">Underutilized EBS‑optimized instances (4x m5.large, &lt;20% utilization)</td><td class="value">$307.60/mo</td></tr>
-                <tr class="total-row"><td class="label">Savings per audit (typical)</td><td class="value">~$2,880/mo</td></tr>
+                <tr><td class="label">Orphaned Snapshots (Age &gt; 60 days, 2TB total)</td><td class="value">$102.80/mo</td></tr>
+                <tr><td class="label">Unused Elastic IPs (5x, no attachment)</td><td class="value">$18.00/mo</td></tr>
+                <tr><td class="label">Idle ALB (Application Load Balancer, no traffic, 3x)</td><td class="value">$352.80/mo</td></tr>
+                <tr><td class="label">Unused CloudWatch Logs (retention &gt; 30 days, 300GB storage)</td><td class="value">$121.00/mo</td></tr>
+                <tr><td class="label">Underutilized EBS‑optimized instances (5x m5.large, &lt;20% utilization)</td><td class="value">$384.50/mo</td></tr>
+                <tr><td class="label">Idle RDS Read Replicas (2x, no traffic)</td><td class="value">$120.00/mo</td></tr>
+                <tr class="total-row"><td class="label">Savings per audit (typical)</td><td class="value">~$4,461/mo</td></tr>
             </table>
             <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.8rem;">
                 The table above represents typical waste patterns we have observed across multiple audits. Actual savings will be based on your defined scope and detailed in your custom report.
