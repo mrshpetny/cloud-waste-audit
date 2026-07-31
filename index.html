@@ -248,13 +248,11 @@
         }
 
         @media (max-width: 600px) {
-            :root {
-                /* Reduce the scale on mobile so it doesn't look overwhelming */
-                --scale: 0.9; /* Changed from 1.0 to 0.9 */
-            }
+            :root { --scale: 0.9; }
             .document { padding: 1.5rem; }
             .header { flex-direction: column; align-items: flex-start; }
             .header-right { text-align: left; width: 100%; }
+            .header-left img { width: 60px; height: 60px; } /* <-- ADDED THIS LINE */
             .process-list li { flex-direction: column; gap: 0.2rem; }
             .footer { flex-direction: column; align-items: flex-start; }
         }
