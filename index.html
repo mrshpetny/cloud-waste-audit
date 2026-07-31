@@ -248,6 +248,10 @@
         }
 
         @media (max-width: 600px) {
+            /* On mobile, we scale the text up slightly for readability */
+            :root {
+                --scale: 1.0; /* 100% size on mobile makes it perfectly legible */
+            }
             .document { padding: 1.5rem; }
             .header { flex-direction: column; align-items: flex-start; }
             .header-right { text-align: left; width: 100%; }
