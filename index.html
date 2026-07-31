@@ -248,7 +248,16 @@
         }
 
         @media (max-width: 600px) {
-            :root { --scale: 0.9; }
+            /* --- Apply the global scale override --- */
+            :root { --scale: 0.85; } /* 85% size - perfect for mobile */
+            
+            /* --- Force all text to obey the scale, overriding inline HTML styles --- */
+            p, ul, li, .section-title, .fine-print, .footer, .header-right, .header-left .subtitle,
+            .process-list .step, .process-list .content, .diagnostic-table td, .cta-box .cta-text {
+                font-size: calc(var(--fs-base) * var(--scale)) !important;
+            }
+        
+            /* --- Adjust layout elements --- */
             .document { padding: 1.5rem; }
             .header { flex-direction: column; align-items: flex-start; }
             .header-right { text-align: left; width: 100%; }
