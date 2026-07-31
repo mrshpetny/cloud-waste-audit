@@ -78,6 +78,7 @@
         .initiatation-stage-email {
             font-size: calc(var(--fs-small) * var(--scale))
         }
+         .header-left .subtitle,
         .waste-findings-top-statement, 
         .waste-findings-bottom-statement,
         .diagnostic-table td, 
@@ -89,7 +90,7 @@
         }
         
         /* Permanent variables */
-        .header-left .subtitle {font-size: 0.9rem);}
+        .header-left .subtitle {font-size: var(--fs-small);}
         .header-right, .footer {font-size: var(--fs-small);}
         .header-right .location {font-size: var(--fs-location);}
         .badge-list {font-size: var(--fs-small);}
@@ -141,7 +142,7 @@
             border: 2px solid #e5e7eb;
         }
         .header-left h1 {
-            font-size: 1.65rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             margin: 0 0 0.3rem 0;
@@ -154,7 +155,7 @@
         .header-right {
             text-align: right;
             color: #4b5563;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .header-right .domain {
             font-weight: 600;
@@ -162,6 +163,8 @@
         }
         .header-right .location {
             color: #6b7280;
+            display: inline-block;
+            margin-top: 0.1rem;
         }
         .headline-block {
             font-weight: 600; 
