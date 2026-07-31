@@ -60,8 +60,6 @@
         }
         .header-left .subtitle,
         .header-right,
-        .section-title,
-        .fine-print,
         .footer,
         p, ul, li,
         .diagnostic-table td,
@@ -74,11 +72,63 @@
             font-size: calc(var(--fs-large) * var(--scale));
         }
         .cta-box .cta-title {
-            font-size: calc(var(--fs-medium) * var(--scale));
+            font-size: calc(1.1rem * var(--scale));
         }
         p.headline-block, .headline-block p {
             font-size: calc(var(--fs-medium) * var(--scale));
         }
+        .section-title {
+            font-size: 0.85rem;
+        }
+        .header-right {
+            font-size: 0.85rem;
+        }
+        .header-right .location {
+            font-size: 0.7rem; 
+        }
+        .header-left .subtitle {
+            font-size: 0.9rem;
+        }
+        .process-list .step {
+            font-size: 0.95rem;
+        }
+        .process-list .content {
+            font-size: 0.95rem;
+        }
+        .footer {
+            font-size: 0.85rem;
+        }
+        .badge-list {
+            font-size: 0.85rem;
+        }
+        .badge-item {
+            font-size: 0.8rem;
+        }
+        .problem-statement {
+            font-size: 0.95rem;
+        }
+        .solution-statement {
+            font-size: 0.95rem;
+        }
+        .gurantee-statement {
+            font-size: 0.95rem;
+        }
+        .waste-findings-top-statement, .waste-findings-bottom-statement {
+            font-size: 0.9rem;
+        }
+        .initiatation-stage-email {
+            font-size: 0.85rem;
+        }
+        .fine-print {
+            font-size: 0.9rem;
+        }
+        .footer-domain {
+            font-size: 0.75rem;
+        }
+        .copyright {
+            font-size: 0.75rem;
+        }
+
         * { box-sizing: border-box; }
         body {
             background-color: #f5f5f5;
@@ -128,14 +178,12 @@
             color: #0b1f33;
         }
         .header-left .subtitle {
-            font-size: 0.9rem;
             font-weight: 500;
             color: #4b5563;
             margin: 0;
         }
         .header-right {
             text-align: right;
-            font-size: 0.85rem;
             color: #4b5563;
             line-height: 1.5;
         }
@@ -143,13 +191,24 @@
             font-weight: 600;
             color: #0b1f33;
         }
+        .header-right .location {
+            color: #6b7280;
+        }
+        .headline-block {
+            font-weight: 600; 
+            color: #0b1f33; 
+            margin: 0 0 0.6rem 0; 
+            line-height: 1.3; 
+            border-bottom: 1px solid #e5e7eb; 
+            padding-bottom: 0.5rem; 
+            display: block;
+        }
 
         /* -- Sections -- */
         .section {
             margin-bottom: 2.2rem;
         }
         .section-title {
-            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.06em;
@@ -163,12 +222,6 @@
             margin: 1rem 0 0.4rem 0;
             color: #0b1f33;
             line-height: 1.3;
-        }
-        .fine-print {
-            font-size: 0.9rem;
-            color: #4b5563;
-            margin-top: 0.3rem;
-            line-height: 1.7;
         }
 
         p, ul {
@@ -216,11 +269,9 @@
             font-weight: 600;
             color: #0b1f33;
             min-width: 2.2rem;
-            font-size: 0.95rem;
         }
         .process-list .content {
             color: #4b5563;
-            font-size: 0.95rem;
         }
         .process-list .content strong {
             font-weight: 600;
@@ -231,7 +282,6 @@
         .diagnostic-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.9rem;
             margin: 0.8rem 0;
         }
         .diagnostic-table td {
@@ -266,7 +316,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 1rem;
-            font-size: 0.85rem;
             color: #4b5563;
         }
         .footer a {
@@ -280,7 +329,7 @@
             :root { --scale: 0.85; } /* 85% size - perfect for mobile */
             
             /* --- Force all text to obey the scale, overriding inline HTML styles --- */
-            p, ul, li, .section-title, .fine-print, .footer, .header-right, .header-left .subtitle,
+            p, ul, li, .section-title, .footer, .header-right, .header-left .subtitle,
             .process-list .step, .process-list .content, .diagnostic-table td, .cta-box .cta-text {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
@@ -332,25 +381,23 @@
             </div>
             <div class="header-right">
                 <span class="domain">mrshpetny.com</span><br>
-                <span style="font-size: 0.7rem; color: #6b7280;">California, USA</span><br>
+                <span class="location">California, USA</span><br>
             </div>
         </div>
 
         <!-- 1. HEADLINE -->
         <div class="section" style="margin-bottom: 2.5rem;">
-            <p class="headline-block" style="font-weight: 600; color: #0b1f33; margin: 0 0 0.6rem 0; line-height: 1.3; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; display: block;">
-                Stop bleeding an extra ~$36k–$120k a year on AWS
-            </p>
-            <p style="font-size: 0.85rem; color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+            <p class="headline-block">Stop bleeding an extra ~$36k–$120k a year on AWS</p>
+            <p class="badge-list" style="color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                <span class="badge-item" style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     Principal‑led boutique firm
                 </span>
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+                <span class="badge-item" style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     No calls, email only
                 </span>
             </p>
-            <p style="font-size: 0.85rem; color: #4b5563; margin: 0.4rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+            <p class="badge-list" style="color: #4b5563; margin: 0.4rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                <span class="badge-item" style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     $12,000 a year waste found or audit is free
                 </span>
             </p>
@@ -359,7 +406,7 @@
         <!-- 2. PROBLEM -->
         <div class="section">
             <div class="section-title">Problem</div>
-            <p style="margin-top: 1rem; margin-bottom: 1.2rem; font-size: 0.95rem; line-height: 1.6;">
+            <p class="problem-statement" style="margin-top: 1rem; margin-bottom: 1.2rem; line-height: 1.6;">
                 <strong>20–25% of our AWS bills are pure waste.</strong> Idle servers, unattached storage, over‑provisioned compute – they burn capital every month, invisible, delivering zero value. We pay for nothing and can't even see it, developers fear breaking things – it keeps waste untouched.
             </p>
         </div>
@@ -367,7 +414,7 @@
         <!-- 3. SOLUTION & OUTCOME -->
         <div class="section">
             <div class="section-title">Solution & Outcome</div>
-            <p style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; line-height: 1.6;">
+            <p class="solution-statement" style="margin-top: 1rem; margin-bottom: 0.5rem; line-height: 1.6;">
                 <strong>So we audit your AWS infrastructure, delivering:</strong><br>
             </p>
             <ul>
@@ -384,7 +431,7 @@
         <div class="section">
             <div class="section-title">Guarantee</div>
             <div style="color: #1f2937; line-height: 1.6; margin: 0;">
-                <p style="margin: 0; font-size: 0.95rem;">
+                <p class="gurantee-statement" style="margin: 0;">
                     <strong style="color: #0b1f33;">At least $1,000 per month waste found across the scoped services.</strong> If not identified, the full fee is refunded automatically via USDT (TRC-20) within 5 business days.
                 </p>
             </div>
@@ -393,7 +440,7 @@
         <!-- 5. WASTE FINDINGS -->
         <div class="section">
             <div class="section-title">Waste Findings</div>
-            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.5rem;">
+            <p class="waste-findings-top-statement" style="color: #4b5563; margin-bottom: 0.5rem;">
                 What we typically find across standard AWS environments ($15k–$50k monthly spend).
             </p>
             
@@ -413,7 +460,7 @@
                 </table>
             </div>
         
-            <p style="font-size: 0.9rem; color: #4b5563; margin-bottom: 0.8rem;">
+            <p class="waste-findings-bottom-statement" style="color: #4b5563; margin-bottom: 0.8rem;">
                 The table above represents typical waste patterns we have observed across multiple audits. Actual savings will be based on your defined scope and detailed in your custom report.
             </p>
         </div>
@@ -427,7 +474,7 @@
                     <span class="content">
                         <strong>Initiate Qualification</strong><br>
                         Send "Audit" with your monthly AWS spend to begin.<br> Email:
-                        <span style="display: inline-block; font-family: monospace; background: #f3f4f6; padding: 0 0.3rem; border-radius: 3px; font-size: 0.85rem;">
+                        <span class="initiatation-stage-email" style="display: inline-block; font-family: monospace; background: #f3f4f6; padding: 0 0.3rem; border-radius: 3px;">
                             <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
                         </span><br>
                     </span>
@@ -467,7 +514,7 @@
         <!-- 7. TIMELINE & CONDITIONS (FINE PRINT AT BOTTOM) -->
         <div class="section" style="margin-bottom: 0;">
             <div class="section-title">Timeline &amp; Conditions</div>
-            <div style="font-size: 0.9rem; color: #4b5563; line-height: 1.6;">
+            <div class="fine-print" style="color: #4b5563; line-height: 1.6;">
                 Free cancellation is available for 24 hours after signing for a full refund. Read‑only access must be provided within 3 business days of signing; otherwise, engagement terminates and fee retained. The 72‑hour delivery starts after valid access and the cancellation window expiry. Data is permanently deleted within 7 days of report delivery.
             </div>
         </div>
@@ -477,11 +524,11 @@
         <div class="footer">
             <div>
                 <a href="mailto:alexey.shpetny.official@gmail.com">alexey.shpetny.official@gmail.com</a><br>
-                <span style="display:block; margin-top:0.4rem; font-size:0.75rem; color:#6b7280;">
+                <span class="footer-domain" style="display:block; margin-top: 0.4rem; color:#6b7280;">
                     mrshpetny.com | Est. 2026
                 </span>
             </div>
-            <div style="font-size: 0.75rem; color: #6b7280;">
+            <div class="copyright" style="color: #6b7280;">
                 © 2026 IE Mr. Shpetny. All rights reserved.
             </div>
         </div>
