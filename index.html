@@ -10,256 +10,114 @@
     <link rel="icon" type="image/png" href="favicon.png?v=4">
     <style>
         :root {
-            /* --- CORE TYPE SCALE --- */
-            --fs-base: 0.95rem;       /* Main body text (default) */
+            --fs-base: 0.95rem;       /* Main body text */
             --fs-small: 0.85rem;      /* Badges, fine print, footer */
-            --fs-medium: 1.4rem;      /* Headline & primary statements */
+            --fs-medium: 1.2rem;      /* Headline & primary statements (balanced) */
             --fs-large: 1.4rem;       /* Large headings (if used) */
-
-            /* --- ADJUSTMENT SWITCH --- */
-            /* Change this single number to scale everything up/down globally. */
-            /* --scale: 1;   (100% size) */
-            --scale: 0.95;   /* 0.95 = 95% size (slightly smaller) */
-            /* --scale: 0.9;  (90% size - if you want it tight) */
+            --scale: 0.95;            /* Desktop scale */
         }
-
-        /* Map the variables to actual sizes */
-        body {
+    
+        body { font-size: calc(var(--fs-base) * var(--scale)); }
+        .header-left h1 { font-size: calc(var(--fs-large) * var(--scale)); }
+        .header-left .subtitle, .header-right, .section-title, .fine-print, .footer,
+        p, ul, li, .diagnostic-table td, .cta-box .cta-text, .process-list .content, .process-list .step {
             font-size: calc(var(--fs-base) * var(--scale));
         }
-        .header-left h1 {
-            font-size: calc(var(--fs-large) * var(--scale));
-        }
-        .header-left .subtitle,
-        .header-right,
-        .section-title,
-        .fine-print,
-        .footer,
-        p, ul, li,
-        .diagnostic-table td,
-        .cta-box .cta-text,
-        .process-list .content,
-        .process-list .step {
-            font-size: calc(var(--fs-base) * var(--scale));
-        }
-        .primary-statement {
-            font-size: calc(var(--fs-large) * var(--scale));
-        }
-        .cta-box .cta-title {
-            font-size: calc(var(--fs-medium) * var(--scale));
-        }
-        p.headline-block, .headline-block p {
-            font-size: calc(var(--fs-medium) * var(--scale));
-        }
+        .primary-statement { font-size: calc(var(--fs-large) * var(--scale)); }
+        .cta-box .cta-title { font-size: calc(var(--fs-medium) * var(--scale)); }
+        p.headline-block, .headline-block p { font-size: calc(var(--fs-medium) * var(--scale)); }
+    
         * { box-sizing: border-box; }
         body {
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            padding: 2rem 1rem;
-            font-family: 'Inter', -apple-system, sans-serif;
-            margin: 0;
+            background-color: #f5f5f5; display: flex; justify-content: center; padding: 2rem 1rem;
+            font-family: 'Inter', -apple-system, sans-serif; margin: 0;
         }
         .document {
-            background: #ffffff;
-            max-width: 800px;
-            width: 100%;
-            padding: 2.5rem 2.5rem 2rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
+            background: #ffffff; max-width: 800px; width: 100%;
+            padding: 2.5rem 2.5rem 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border: 1px solid #e0e0e0; border-radius: 6px;
         }
-
+    
         /* -- Letterhead Header -- */
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-bottom: 1.5rem;
-            border-bottom: 2px solid #0b1f33;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-            gap: 1rem;
+            display: flex; align-items: center; justify-content: space-between;
+            padding-bottom: 1.5rem; border-bottom: 2px solid #0b1f33; margin-bottom: 2.5rem;
+            flex-wrap: wrap; gap: 1rem;
         }
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-        .header-left img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #e5e7eb;
-        }
-        .header-left h1 {
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 0 0 0.1rem 0;
-            color: #0b1f33;
-        }
-        .header-left .subtitle {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #4b5563;
-            margin: 0;
-        }
-        .header-right {
-            text-align: right;
-            font-size: 0.85rem;
-            color: #4b5563;
-            line-height: 1.5;
-        }
-        .header-right .domain {
-            font-weight: 600;
-            color: #0b1f33;
-        }
-
+        .header-left { display: flex; align-items: center; gap: 1.2rem; }
+        .header-left img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid #e5e7eb; }
+        .header-left h1 { font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.1rem 0; color: #0b1f33; }
+        .header-left .subtitle { font-weight: 500; color: #4b5563; margin: 0; }
+        .header-right { text-align: right; color: #4b5563; line-height: 1.5; }
+        .header-right .domain { font-weight: 600; color: #0b1f33; }
+    
         /* -- Sections -- */
-        .section {
-            margin-bottom: 2.2rem;
-        }
+        .section { margin-bottom: 2.2rem; }
         .section-title {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #6b7280;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+            color: #6b7280; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; margin-bottom: 1rem;
         }
-        .primary-statement {
-            font-weight: 600;
-            margin: 1rem 0 0.4rem 0;
-            color: #0b1f33;
-            line-height: 1.3;
-        }
-        .fine-print {
-            font-size: 0.9rem;
-            color: #4b5563;
-            margin-top: 0.3rem;
-            line-height: 1.7;
-        }
-
-        p, ul {
-            color: #1f2937;
-            margin: 0.4rem 0;
-            line-height: 1.6;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0.6rem 0;
-        }
-        ul li {
-            margin-bottom: 0.3rem;
-            padding-left: 1.2rem;
-            position: relative;
-        }
-        ul li::before {
-            content: "·";
-            position: absolute;
-            left: 0;
-            color: #0b1f33;
-            font-weight: 700;
-        }
-        strong {
-            font-weight: 600;
-            color: #0b1f33;
-        }
-
+        .primary-statement { font-weight: 600; margin: 1rem 0 0.4rem 0; color: #0b1f33; line-height: 1.3; }
+        .fine-print { color: #4b5563; margin-top: 0.3rem; line-height: 1.7; }
+    
+        p, ul { color: #1f2937; margin: 0.4rem 0; line-height: 1.6; }
+        ul { list-style: none; padding-left: 0; margin: 0.6rem 0; }
+        ul li { margin-bottom: 0.3rem; padding-left: 1.2rem; position: relative; }
+        ul li::before { content: "·"; position: absolute; left: 0; color: #0b1f33; font-weight: 700; }
+        strong { font-weight: 600; color: #0b1f33; }
+    
         /* -- Process List -- */
-        .process-list {
-            list-style: none;
-            padding: 0;
-            margin: 1.2rem 0 0.5rem;
-        }
+        .process-list { list-style: none; padding: 0; margin: 1.2rem 0 0.5rem; }
         .process-list > li {
-            display: flex;
-            gap: 1rem;
-            padding: 0.7rem 0;
-            border-bottom: 1px solid #f0f0f0;
-            align-items: flex-start;
+            display: flex; gap: 1rem; padding: 0.7rem 0;
+            border-bottom: 1px solid #f0f0f0; align-items: flex-start;
         }
         .process-list > li:last-child { border-bottom: none; }
-        .process-list .step {
-            font-weight: 600;
-            color: #0b1f33;
-            min-width: 2.2rem;
-            font-size: 0.95rem;
-        }
-        .process-list .content {
-            color: #4b5563;
-            font-size: 0.95rem;
-        }
-        .process-list .content strong {
-            font-weight: 600;
-            color: #1f2937;
-        }
-
+        .process-list .step { font-weight: 600; color: #0b1f33; min-width: 2.2rem; }
+        .process-list .content { color: #4b5563; }
+        .process-list .content strong { font-weight: 600; color: #1f2937; }
+    
         /* -- Diagnostic Table -- */
-        .diagnostic-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            margin: 0.8rem 0;
-        }
-        .diagnostic-table td {
-            padding: 0.4rem 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
+        .diagnostic-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; }
+        .diagnostic-table td { padding: 0.4rem 0; border-bottom: 1px solid #f0f0f0; }
         .diagnostic-table tr:last-child td { border-bottom: none; }
         .diagnostic-table .label { color: #1f2937; }
         .diagnostic-table .value { text-align: right; font-weight: 500; color: #0b1f33; }
         .diagnostic-table .total-row td {
-            padding-top: 0.8rem;
-            border-top: 2px solid #0b1f33;
-            font-weight: 600;
-            color: #0b1f33;
+            padding-top: 0.8rem; border-top: 2px solid #0b1f33; font-weight: 600; color: #0b1f33;
         }
-
+    
         /* -- CTA box -- */
         .cta-box {
             background: #f8fafc; border: 1px solid #dbe3ea; border-radius: 6px;
             padding: 1.5rem; margin-top: 1.5rem;
         }
-        .cta-box .cta-title { font-size: 1.1rem; font-weight: 600; color: #0b1f33; margin: 0 0 0.5rem 0; }
+        .cta-box .cta-title { font-weight: 600; color: #0b1f33; margin: 0 0 0.5rem 0; }
         .cta-box .cta-text { color: #4b5563; margin: 0; }
         .cta-box a { color: #0b1f33; font-weight: 600; text-decoration: none; border-bottom: 1px solid #0b1f33; }
-        
+    
         /* -- Footer -- */
         .footer {
-            border-top: 2px solid #0b1f33;
-            padding-top: 1.5rem;
-            margin-top: 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.85rem;
+            border-top: 2px solid #0b1f33; padding-top: 1.5rem; margin-top: 2.5rem;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
             color: #4b5563;
         }
-        .footer a {
-            color: #0b1f33;
-            text-decoration: none;
-            border-bottom: 1px solid #0b1f33;
-        }
-
+        .footer a { color: #0b1f33; text-decoration: none; border-bottom: 1px solid #0b1f33; }
+    
+        /* -- Mobile Overrides (EXACT FINAL LOCK) -- */
         @media (max-width: 600px) {
-            :root { --scale: 0.85; }
+            :root { --scale: 0.85; } /* 85% size – the sweet spot for mobile */
             
-            /* Mobile override which beats the inline styles */
-            p, ul, li, div, span,
-            .header-left .subtitle, .header-right,
-            .section-title, .fine-print, .footer,
-            .process-list .step, .process-list .content,
-            .diagnostic-table td, .cta-box .cta-text, .cta-box .cta-title {
+            /* Force all text to respect the scale, overriding inline HTML styles */
+            p, ul, li, div, span, .header-left .subtitle, .header-right,
+            .section-title, .fine-print, .footer, .cta-box .cta-title, .cta-box .cta-text,
+            .process-list .step, .process-list .content, .diagnostic-table td {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
-        
-            /* Layout adjustments */
+            .headline-block, .headline-block p {
+                font-size: calc(var(--fs-medium) * var(--scale)) !important;
+            }
+    
             .document { padding: 1.5rem; }
             .header { flex-direction: column; align-items: flex-start; }
             .header-right { text-align: left; width: 100%; }
@@ -267,28 +125,13 @@
             .process-list li { flex-direction: column; gap: 0.2rem; }
             .footer { flex-direction: column; align-items: flex-start; }
         }
-
+    
         /* -- Mobile Responsive Table -- */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;          /* Enables horizontal scrolling */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iPhones */
-            margin-bottom: 0.5rem;
-        }
-        
-        .diagnostic-table {
-            min-width: 450px;          /* Forces the table to keep its full width */
-        }
-        
-        /* Slight padding adjustment for mobile */
+        .table-responsive { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 0.5rem; }
+        .diagnostic-table { min-width: 450px; }
         @media (max-width: 600px) {
-            .diagnostic-table td {
-                padding: 0.4rem 0.3rem;
-            }
-            .diagnostic-table .value {
-                white-space: nowrap;   /* Prevents the price column from wrapping */
-                padding-left: 1rem;    /* Adds spacing between description and price */
-            }
+            .diagnostic-table td { padding: 0.4rem 0.3rem; }
+            .diagnostic-table .value { white-space: nowrap; padding-left: 1rem; }
         }
     </style>
 </head>
