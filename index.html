@@ -311,7 +311,7 @@
 
         @media (max-width: 600px) {
             /* --- Apply the global scale override --- */
-            :root { --scale: 0.85; } /* 85% size - perfect for mobile */
+            :root { --scale: 0.85; --low-icons-scale: 0.90 } /* 85% size - perfect for mobile */
 
             /* --- Force all text to obey the scale, overriding inline HTML styles --- */
             .primary-statement { 
@@ -351,6 +351,11 @@
             .process-list .step, .process-list .content, .diagnostic-table td, .cta-box .cta-text {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
+
+            .badge-list {font-size: calc(var(--fs-small) * var(--low-icons-scale));}
+            .badge-item {font-size: calc(var(--fs-badge) * var(--low-icons-scale));}
+            
+            .waste-findings-top-statement {margin-bottom: 0 important;}
 
             /* --- Adjust layout elements --- */
             .document { padding: 1.5rem; }
@@ -471,7 +476,6 @@
             <p class="waste-findings-top-statement" style="color: #4b5563; margin-bottom: 0.5rem;">
                 What we typically find across standard AWS environments ($15k–$50k monthly spend).
             </p>
-            
             <div class="table-responsive">
                 <table class="diagnostic-table">
                     <tr><td class="label">Idle EC2 Instances (12x t3.medium, running 24/7, &lt;5% CPU)</td><td class="value">$1,405.44/mo</td></tr>
