@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Shpetny – CEO & Executive Audit Engagements | Guaranteed AWS Waste Audit</title>
-    <meta name="description" content="Mr. Shpetny, CEO & Executive Audit Engagements, provides a guaranteed AWS cloud waste audit. Find at least $12k/year in waste or receive a full USDT refund automatically. No calls, email only. Boutique principal-led firm.">
-    <meta name="keywords" content="AWS audit, cloud cost optimization, waste audit, cloud cost audit, AWS waste, Mr. Shpetny, Executive Audit Engagements, AWS billing audit, guarantee audit">
+    <title>Mr. Shpetny – Executive Audit Engagements</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png?v=4">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Mr. Shpetny – Executive Audit Engagements",
-      "description": "A principal-led boutique firm providing guaranteed cloud waste audits for US mid-market founders. Find at least $12k/year in waste or receive a full USDT refund.",
-      "url": "https://mrshpetny.com",
-      "logo": "https://github.com/mrshpetny.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Audit Qualification",
-        "email": "alexey.shpetny.work@gmail.com"
-      },
-      "sameAs": [
-        "https://mrshpetny.com"
-      ],
-      "foundingDate": "2026",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "USA"
-      }
-    }
-    </script>
-
     <style>
+        :root {
+            /* --- CORE TYPE SCALE --- */
+            --fs-base: 0.95rem;       /* Main body text (default) */
+            --fs-small: 0.85rem;      /* Badges, fine print, footer */
+            --fs-medium: 1.15rem;     /* Headline & primary statements */
+            --fs-large: 1.4rem;       /* Large headings (if used) */
+
+            /* --- ADJUSTMENT SWITCH --- */
+            /* Change this single number to scale everything up/down globally. */
+            /* --scale: 1;   (100% size) */
+            --scale: 0.95;   /* 0.95 = 95% size (slightly smaller) */
+            /* --scale: 0.9;  (90% size - if you want it tight) */
+        }
+
+        /* Map the variables to actual sizes */
+        body {
+            font-size: calc(var(--fs-base) * var(--scale));
+        }
+        .header-left h1 {
+            font-size: calc(var(--fs-large) * var(--scale));
+        }
+        .header-left .subtitle,
+        .header-right,
+        .section-title,
+        .fine-print,
+        .footer,
+        p, ul, li,
+        .diagnostic-table td,
+        .cta-box .cta-text,
+        .process-list .content,
+        .process-list .step {
+            font-size: calc(var(--fs-base) * var(--scale));
+        }
+        .primary-statement {
+            font-size: calc(var(--fs-large) * var(--scale));
+        }
+        .cta-box .cta-title {
+            font-size: calc(var(--fs-medium) * var(--scale));
+        }
+        p.headline-block, .headline-block p {
+            font-size: calc(var(--fs-medium) * var(--scale));
+        }
         * { box-sizing: border-box; }
         body {
             background-color: #f5f5f5;
@@ -80,7 +94,6 @@
             border: 2px solid #e5e7eb;
         }
         .header-left h1 {
-            font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             margin: 0 0 0.1rem 0;
@@ -118,7 +131,6 @@
             margin-bottom: 1rem;
         }
         .primary-statement {
-            font-size: 1.4rem;
             font-weight: 600;
             margin: 1rem 0 0.4rem 0;
             color: #0b1f33;
@@ -145,7 +157,6 @@
             margin-bottom: 0.3rem;
             padding-left: 1.2rem;
             position: relative;
-            font-size: 0.95rem;
         }
         ul li::before {
             content: "·";
@@ -215,7 +226,7 @@
             padding: 1.5rem; margin-top: 1.5rem;
         }
         .cta-box .cta-title { font-size: 1.1rem; font-weight: 600; color: #0b1f33; margin: 0 0 0.5rem 0; }
-        .cta-box .cta-text { font-size: 0.95rem; color: #4b5563; margin: 0; }
+        .cta-box .cta-text { color: #4b5563; margin: 0; }
         .cta-box a { color: #0b1f33; font-weight: 600; text-decoration: none; border-bottom: 1px solid #0b1f33; }
         
         /* -- Footer -- */
@@ -265,7 +276,7 @@
 
         <!-- 1. HEADLINE -->
         <div class="section" style="margin-bottom: 2.5rem;">
-            <p style="font-size: 1.15rem; font-weight: 600; color: #0b1f33; margin: 0 0 0.6rem 0; line-height: 1.3; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; display: block;">
+            <p class="headline-block" style="font-weight: 600; color: #0b1f33; margin: 0 0 0.6rem 0; line-height: 1.3; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; display: block;">
                 Stop bleeding an extra ~$36k–$120k a year on AWS
             </p>
             <p style="font-size: 0.85rem; color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
@@ -349,9 +360,9 @@
                     <span class="step">01.</span>
                     <span class="content">
                         <strong>Initiate Qualification</strong><br>
-                        Send "Audit" with your monthly AWS spend to begin.<br>
+                        Send "Audit" with your monthly AWS spend to begin.<br> Email:
                         <span style="display: inline-block; font-family: monospace; background: #f3f4f6; padding: 0 0.3rem; border-radius: 3px; font-size: 0.85rem;">
-                            Email: <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
+                            <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
                         </span><br>
                     </span>
                 </li>
