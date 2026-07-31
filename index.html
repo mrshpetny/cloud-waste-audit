@@ -13,7 +13,7 @@
             /* --- CORE TYPE SCALE --- */
             --fs-base: 0.95rem;       /* Main body text (default) */
             --fs-small: 0.85rem;      /* Badges, fine print, footer */
-            --fs-medium: 1.15rem;     /* Headline & primary statements */
+            --fs-medium: 1.4rem;      /* Headline & primary statements */
             --fs-large: 1.4rem;       /* Large headings (if used) */
 
             /* --- ADJUSTMENT SWITCH --- */
@@ -248,16 +248,18 @@
         }
 
         @media (max-width: 600px) {
-            /* --- Apply the global scale override --- */
-            :root { --scale: 0.85; } /* 85% size - perfect for mobile */
+            :root { --scale: 0.85; }
             
-            /* --- Force all text to obey the scale, overriding inline HTML styles --- */
-            p, ul, li, .section-title, .fine-print, .footer, .header-right, .header-left .subtitle,
-            .process-list .step, .process-list .content, .diagnostic-table td, .cta-box .cta-text {
+            /* Mobile override which beats the inline styles */
+            p, ul, li, div, span,
+            .header-left .subtitle, .header-right,
+            .section-title, .fine-print, .footer,
+            .process-list .step, .process-list .content,
+            .diagnostic-table td, .cta-box .cta-text, .cta-box .cta-title {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
         
-            /* --- Adjust layout elements --- */
+            /* Layout adjustments */
             .document { padding: 1.5rem; }
             .header { flex-direction: column; align-items: flex-start; }
             .header-right { text-align: left; width: 100%; }
@@ -313,16 +315,16 @@
             <p class="headline-block" style="font-weight: 600; color: #0b1f33; margin: 0 0 0.6rem 0; line-height: 1.3; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; display: block;">
                 Stop bleeding an extra ~$36k–$120k a year on AWS
             </p>
-            <p style="font-size: 0.85rem; color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+            <p style="color: #4b5563; margin: 0.2rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     Principal‑led boutique firm
                 </span>
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     No calls, email only
                 </span>
             </p>
-            <p style="font-size: 0.85rem; color: #4b5563; margin: 0.4rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
-                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33; font-size: 0.8rem;">
+            <p style="color: #4b5563; margin: 0.4rem 0 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center;">
+                <span style="display: inline-block; background: #f3f4f6; padding: 0.1rem 0.5rem; border: none; border-radius: 3px; font-weight: 500; color: #0b1f33;">
                     $12,000 a year waste found or audit is free
                 </span>
             </p>
@@ -439,7 +441,7 @@
         <!-- 7. TIMELINE & CONDITIONS (FINE PRINT AT BOTTOM) -->
         <div class="section" style="margin-bottom: 0;">
             <div class="section-title">Timeline &amp; Conditions</div>
-            <div style="font-size: 0.9rem; color: #4b5563; line-height: 1.6;">
+            <div style="color: #4b5563; line-height: 1.6;">
                 Free cancellation is available for 24 hours after signing for a full refund. Read‑only access must be provided within 3 business days of signing; otherwise, engagement terminates and fee retained. The 72‑hour delivery starts after valid access and the cancellation window expiry. Data is permanently deleted within 7 days of report delivery.
             </div>
         </div>
