@@ -312,26 +312,85 @@
         @media (max-width: 600px) {
             /* --- Apply the global scale override --- */
             :root { --scale: 0.85; } /* 85% size - perfect for mobile */
-            
+
             /* --- Force all text to obey the scale, overriding inline HTML styles --- */
+            .primary-statement { 
+                font-size: calc(var(--fs-large) * var(--scale)) !important;
+            }
+            .header-left h1 { 
+                font-size: calc(1.6rem * var(--scale));
+            }
+            body, p, ul, li,
+            .cta-box .cta-text,
+            .process-list .step,
+            .process-list .content,
+            .problem-statement,
+            .solution-statement,
+            .gurantee-statement {
+                font-size: calc(var(--fs-base) * var(--scale)) !important;
+            }
+            p.headline-block, 
+            .headline-block p {
+                font-size: calc(var(--fs-medium) * var(--scale)) !important;
+            }
+            .section-title,
+            .initiatation-stage-email {
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
+            }
+            .header-left .subtitle,
+            .waste-findings-top-statement, 
+            .waste-findings-bottom-statement,
+            .diagnostic-table td, 
+            .fine-print {
+                font-size: calc(0.9rem * var(--scale)) !important;
+            }
+            .cta-box .cta-title {
+                font-size: calc(1.1rem * var(--scale)) !important;
+            }
             p, ul, li, .section-title, .footer, .header-right, .header-left .subtitle,
             .process-list .step, .process-list .content, .diagnostic-table td, .cta-box .cta-text {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
-        
+
             /* --- Adjust layout elements --- */
             .document { padding: 1.5rem; }
-            .header { flex-direction: column; align-items: flex-start; }
-            .header-right { text-align: left; width: 100%; }
-            .header-left img { width: 75px; height: 75px; }
+            
+            /* --- FIX: Keep header on a horizontal row, wrap internal elements if needed --- */
+            .header { 
+                display: flex; 
+                flex-direction: row; 
+                flex-wrap: wrap; 
+                align-items: center; 
+                justify-content: space-between; 
+                gap: 0.5rem; 
+            }
+            /* TIGHTEN .header-left to ensure the photo + name remain aligned */
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 1rem; 
+                flex: 1;
+            }
+            .header-left img { 
+                width: 75px; 
+                height: 75px; 
+                flex-shrink: 0; /* Prevents avatar from squishing */
+            }
+            /* TIGHTEN .header-right to ensure domain doesn't break line awkwardly */
+            .header-right {
+                flex-shrink: 0; /* Keeps it tight to the right */
+                text-align: right;
+            }
+
+            /* --- Rest of layout adjustments --- */
             .process-list li { flex-direction: column; gap: 0.2rem; }
             .footer { flex-direction: column; align-items: flex-start; }
             .diagnostic-table td {
                 padding: 0.4rem 0.3rem;
             }
             .diagnostic-table .value {
-                white-space: nowrap;   /* Prevents the price column from wrapping */
-                padding-left: 1rem;    /* Adds spacing between description and price */
+                white-space: nowrap;
+                padding-left: 1rem;
             }
         }
     </style>
