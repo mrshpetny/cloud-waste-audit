@@ -62,7 +62,6 @@
             font-size: calc(1.6rem * var(--scale)); 
         }
         body, p, ul, li,
-        .diagnostic-table td,
         .cta-box .cta-text,
         .process-list .step,
         .process-list .content,
@@ -81,7 +80,8 @@
         }
         .header-left .subtitle,
         .waste-findings-top-statement, 
-        .waste-findings-bottom-statement, 
+        .waste-findings-bottom-statement,
+        .diagnostic-table td, 
         .fine-print {
             font-size: calc(0.9rem * var(--scale));
         }
@@ -243,6 +243,7 @@
             color: #4b5563;
         }
         .process-list .content strong {
+            display: inline-block;
             font-weight: 600;
             color: #1f2937;
         }
