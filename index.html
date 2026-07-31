@@ -43,92 +43,61 @@
             --fs-small: 0.85rem;      /* Badges, fine print, footer */
             --fs-medium: 1.15rem;     /* Headline & primary statements */
             --fs-large: 1.4rem;       /* Large headings (if used) */
+            
+            --fs-location: 0.7rem;
+            --fs-badge: 0.8rem;
+            --fs-footer-domain: 0.75rem;
+            --fs-footer-copyright: 0.75rem;
 
             /* --- ADJUSTMENT SWITCH --- */
             /* Change this single number to scale everything up/down globally. */
-            /* --scale: 1;   (100% size) */
-            --scale: 0.95;   /* 0.95 = 95% size (slightly smaller) */
-            /* --scale: 0.9;  (90% size - if you want it tight) */
+            --scale: 0.95;
         }
 
         /* Map the variables to actual sizes */
-        body {
-            font-size: calc(var(--fs-base) * var(--scale));
+        .primary-statement { 
+            font-size: calc(var(--fs-large) * var(--scale)); 
         }
-        .header-left h1 {
-            font-size: calc(var(--fs-large) * var(--scale));
+        .header-left h1 { 
+            font-size: calc(1.6rem * var(--scale)); 
         }
-        .header-left .subtitle,
-        .header-right,
-        .footer,
-        p, ul, li,
+        body, p, ul, li,
         .diagnostic-table td,
         .cta-box .cta-text,
+        .process-list .step,
         .process-list .content,
-        .process-list .step {
+        .problem-statement,
+        .solution-statement,
+        .gurantee-statement {
             font-size: calc(var(--fs-base) * var(--scale));
         }
-        .primary-statement {
-            font-size: calc(var(--fs-large) * var(--scale));
-        }
-        .cta-box .cta-title {
-            font-size: calc(1.15rem * var(--scale));
-        }
-        p.headline-block, .headline-block p {
+        p.headline-block, 
+        .headline-block p {
             font-size: calc(var(--fs-medium) * var(--scale));
         }
-        .section-title {
-            font-size: 0.85rem;
-        }
-        .header-right {
-            font-size: 0.85rem;
-        }
-        .header-right .location {
-            font-size: 0.7rem; 
-        }
-        .header-left .subtitle {
-            font-size: 0.9rem;
-        }
-        .process-list .step {
-            font-size: 0.95rem;
-        }
-        .process-list .content {
-            font-size: 0.95rem;
-        }
-        .footer {
-            font-size: 0.85rem;
-        }
-        .badge-list {
-            font-size: 0.85rem;
-        }
-        .badge-item {
-            font-size: 0.8rem;
-        }
-        .problem-statement {
-            font-size: 0.95rem;
-        }
-        .solution-statement {
-            font-size: 0.95rem;
-        }
-        .gurantee-statement {
-            font-size: 0.95rem;
-        }
-        .waste-findings-top-statement, .waste-findings-bottom-statement {
-            font-size: 0.9rem;
-        }
+        .section-title,
         .initiatation-stage-email {
-            font-size: 0.85rem;
+            font-size: calc(var(--fs-small) * var(--scale))
         }
+        .header-left .subtitle,
+        .waste-findings-top-statement, 
+        .waste-findings-bottom-statement, 
         .fine-print {
-            font-size: 0.9rem;
+            font-size: calc(0.9rem * var(--scale));
         }
-        .footer-domain {
-            font-size: 0.75rem;
+        .cta-box .cta-title {
+            font-size: calc(1.1rem * var(--scale));
         }
-        .copyright {
-            font-size: 0.75rem;
-        }
+        
+        /* Permanent variables */
+        .header-right, .footer {font-size: var(--fs-small);}
+        .header-right .location {font-size: var(--fs-location);}
+        .badge-list {font-size: var(--fs-small);}
+        .badge-item {font-size: var(--fs-badge);}
+        .footer-domain {font-size: var(--fs-footer-domain);}
+        .copyright {font-size: var(--fs-footer-copyright);}
 
+        /* Other page variables */
         * { box-sizing: border-box; }
         body {
             background-color: #f5f5f5;
@@ -301,10 +270,14 @@
         /* -- CTA box -- */
         .cta-box {
             background: #f8fafc; border: 1px solid #dbe3ea; border-radius: 6px;
-            padding: 1.5rem; margin-top: 1.5rem;
+            padding: 1.5rem;           
+            margin-top: 1.5rem;
         }
-        .cta-box .cta-title { font-weight: 600; color: #0b1f33; margin: 0 0 0.5rem 0; }
-        .cta-box .cta-text { color: #4b5563; margin: 0; }
+        .cta-box .cta-title {
+            font-weight: 600; color: #0b1f33;
+            margin: 0 0 0.4rem 0;     
+        }
+        .cta-box .cta-text { margin: 0; }
         .cta-box a { color: #0b1f33; font-weight: 600; text-decoration: none; border-bottom: 1px solid #0b1f33; }
         
         /* -- Footer -- */
@@ -324,6 +297,17 @@
             border-bottom: 1px solid #0b1f33;
         }
 
+        /* -- Mobile Responsive Table -- */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;          /* Enables horizontal scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iPhones */
+            margin-bottom: 0.5rem;
+        }
+        .diagnostic-table {
+            min-width: 450px;          /* Forces the table to keep its full width */
+        }
+
         @media (max-width: 600px) {
             /* --- Apply the global scale override --- */
             :root { --scale: 0.85; } /* 85% size - perfect for mobile */
@@ -341,22 +325,6 @@
             .header-left img { width: 75px; height: 75px; }
             .process-list li { flex-direction: column; gap: 0.2rem; }
             .footer { flex-direction: column; align-items: flex-start; }
-        }
-
-        /* -- Mobile Responsive Table -- */
-        .table-responsive {
-            width: 100%;
-            overflow-x: auto;          /* Enables horizontal scrolling */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iPhones */
-            margin-bottom: 0.5rem;
-        }
-        
-        .diagnostic-table {
-            min-width: 450px;          /* Forces the table to keep its full width */
-        }
-        
-        /* Slight padding adjustment for mobile */
-        @media (max-width: 600px) {
             .diagnostic-table td {
                 padding: 0.4rem 0.3rem;
             }
