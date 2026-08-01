@@ -159,7 +159,16 @@
         .header-right .domain {
             font-weight: 600;
             color: #0b1f33;
+            text-decoration: underline;
+            text-underline-offset: 0.2rem;    /* The gap between text and underline */
+            text-decoration-thickness: 1px;   /* Surgical, not heavy */
+            transition: opacity 0.2s ease;
+            text-decoration-color: #0b1f33;   /* Matches the brand color */
         }
+        .header-right .domain:hover {
+            opacity: 0.7;                     /* Subtle feedback without breaking the frame */
+        }
+        
         .header-right .location {
             color: #6b7280;
             display: inline-block;
@@ -421,7 +430,7 @@
                 </div>
             </div>
             <div class="header-right">
-                <span class="domain">mrshpetny.com</span><br>
+                <a href="https://mrshpetny.com" class="domain">mrshpetny.com</a><br>
                 <span class="location">California, USA</span><br>
             </div>
         </div>
