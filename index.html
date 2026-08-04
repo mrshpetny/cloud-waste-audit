@@ -358,7 +358,7 @@
                 --low-icons-scale: 0.87;
             }
 
-            /* 1. UNIFIED TEXT SCALING – EVERYTHING NOW USES --scale */
+            /* 1. UNIFIED TEXT SCALING */
             .primary-statement {
                 font-size: calc(var(--fs-large) * var(--scale)) !important;
             }
@@ -385,7 +385,7 @@
             .badge-list { font-size: calc(var(--fs-small) * var(--low-icons-scale)) !important; }
             .badge-item { font-size: calc(var(--fs-badge) * var(--low-icons-scale)) !important; }
 
-            /* 2. HEADER ALIGNMENT – FIXED */
+            /* 2. HEADER ALIGNMENT – HORIZONTAL ROW */
             .header {
                 display: flex;
                 flex-direction: row;
@@ -418,7 +418,7 @@
                 font-size: calc(var(--fs-location) * var(--scale)) !important;
             }
 
-            /* 3. FOOTER & TABLE – FIXED */
+            /* 3. FOOTER & TABLE */
             .footer {
                 display: flex;
                 flex-direction: column !important;
@@ -457,25 +457,14 @@
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
-        
-            /* 1. Force the header to stack vertically to prevent wrapping */
-            .header {
-                display: flex;
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 0.5rem !important; /* Keeps the container itself tight */
+
+            /* Keep horizontal layout until 400px */
+            .header-left h1 {
+                font-size: calc(1.6rem * var(--scale)) !important;
             }
-        
-            /* 2. Make both blocks full width and remove the leftover margins */
-            .header-left, 
-            .header-right {
-                width: 100% !important;
-                flex: none !important;
-                margin-bottom: 0 !important; /* Kills the 1.1rem margin causing the gap */
-                text-align: left !important;
+            .header-left .subtitle {
+                font-size: calc(0.9rem * var(--scale)) !important;
             }
-        
-            /* 3. Adjust the photo size and inner spacing */
             .header-left img {
                 width: 65px;
                 height: 65px;
@@ -484,10 +473,8 @@
             .header-left {
                 gap: 0.6rem !important;
             }
-        
-            /* 4. Pull the domain up tight under the subtitle */
             .header-right {
-                margin-top: 0.1rem !important; /* Snug against the title, no dead space */
+                margin-bottom: 0.8rem;
                 line-height: calc(1.4 * var(--low-icons-scale)) !important;
             }
             .header-right .domain {
@@ -503,8 +490,37 @@
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
-            .header-left { gap: 0.5rem !important; }
+
+            /* 1. Force the header to stack vertically */
+            .header {
+                display: flex;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.1rem !important;
+            }
+
+            /* 2. Make both blocks full width */
+            .header-left, 
             .header-right {
+                width: 100% !important;
+                flex: none !important;
+                margin-bottom: 0 !important;
+                text-align: left !important;
+            }
+
+            /* 3. Adjust photo and spacing */
+            .header-left img {
+                width: 65px;
+                height: 65px;
+                flex-shrink: 0;
+            }
+            .header-left {
+                gap: 0.6rem !important;
+            }
+
+            /* 4. Pull the domain tight under the subtitle */
+            .header-right {
+                margin-top: 0.6rem !important; /* Snug against the title */
                 line-height: calc(1.4 * var(--low-icons-scale)) !important;
             }
             .header-right .domain {
@@ -623,7 +639,7 @@
                     <span class="content">
                         <strong>Initiate Qualification</strong><br>
                         Send "Audit" with your monthly AWS spend to begin.<br> Email:
-                        <span class="initiatation-stage-email" style="display: inline-block; font-family: monospace; background: #f3f4f6; padding: 0 0.3rem; border-radius: 3px;">
+                        <span class="initiatation-stage-email" style="display: inline-block; font-family: monospace; background: #f3f4f6; padding: 0 0.3rem; border-radius: 3px; word-break: break-all; overflow-wrap: anywhere;">
                             <a href="mailto:alexey.shpetny.work@gmail.com" style="color: #0b1f33; text-decoration: none;">alexey.shpetny.work@gmail.com</a>
                         </span><br>
                     </span>
