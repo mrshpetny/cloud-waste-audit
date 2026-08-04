@@ -353,54 +353,39 @@
         }
 
         @media (max-width: 600px) {
-            /* --- 1. GLOBAL SCALE OVERRIDE --- */
             :root {
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
 
-            /* --- 2. TEXT SCALING OVERRIDES (UNIFIED) --- */
+            /* 1. UNIFIED TEXT SCALING – EVERYTHING NOW USES --scale */
             .primary-statement {
                 font-size: calc(var(--fs-large) * var(--scale)) !important;
+            }
+            .header-left h1 {
+                font-size: calc(1.6rem * var(--scale)) !important;
             }
             body, p, ul, li, .process-list .step, .process-list .content,
             .problem-statement, .solution-statement, .gurantee-statement {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
             p.headline-block, .headline-block p {
-                font-size: calc(var(--fs-medium) * 0.8) !important;
+                font-size: calc(var(--fs-medium) * var(--scale)) !important;
             }
-            .initiatation-stage-email {
-                font-size: calc(var(--fs-small) * 0.85) !important;
+            .section-title, .initiatation-stage-email {
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
             }
             .header-left .subtitle, .waste-findings-top-statement, .waste-findings-bottom-statement,
             .diagnostic-table td, .fine-print, .cta-box .cta-text {
                 font-size: calc(0.9rem * var(--scale)) !important;
             }
             .cta-box .cta-title {
-                font-size: calc(1.05rem * var(--scale)) !important;
+                font-size: calc(1.1rem * var(--scale)) !important;
             }
-            /* Badges scale slightly less aggressively to avoid awkward wrapping */
             .badge-list { font-size: calc(var(--fs-small) * var(--low-icons-scale)) !important; }
             .badge-item { font-size: calc(var(--fs-badge) * var(--low-icons-scale)) !important; }
 
-            /* Force spacing adjustments */
-            .waste-findings-top-statement { margin-bottom: 0 !important; }
-
-            /* --- 3. LAYOUT & STRUCTURAL ADJUSTMENTS --- */
-            .document { padding: 1.5rem; }
-            
-            .header-left h1 {
-                font-size: calc(1.5rem * 0.8) !important;
-            }
-            .section-title {
-                font-size: calc(var(--fs-small) * 0.8) !important;
-            }
-            .header-left .subtitle {
-                font-size: calc(0.88rem * 0.8) !important;
-            }
-
-            /* HEADER: Keeps horizontal row, wraps internal elements if needed */
+            /* 2. HEADER ALIGNMENT – FIXED */
             .header {
                 display: flex;
                 flex-direction: row;
@@ -423,39 +408,37 @@
             .header-right {
                 flex-shrink: 0;
                 text-align: right;
+                line-height: calc(1.4 * var(--low-icons-scale)) !important;
+                margin-bottom: 0.8rem;
+            }
+            .header-right .domain {
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
+            }
+            .header-right .location {
+                font-size: calc(var(--fs-location) * var(--scale)) !important;
             }
 
-            /* FOOTER: Keeps horizontal row, wraps internal elements if needed */
+            /* 3. FOOTER & TABLE – FIXED */
             .footer {
                 display: flex;
-                flex-direction: column !important;   /* Stack vertically on mobile */
-                align-items: flex-start !important;  /* Align everything to the left */
-                gap: 0.75rem !important;            /* Increase vertical spacing */
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.75rem !important;
                 padding-top: 1.2rem !important;
-                font-size: calc(var(--fs-base) * 0.8) !important;
+                font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
-
             .footer > div {
-                flex: none !important;              /* Do not grow/shrink – maintain natural width */
-                width: 100% !important;             /* Each block takes full width */
+                flex: none !important;
+                width: 100% !important;
             }
-
             .footer .copyright {
                 margin-top: 0.25rem;
-                opacity: 0.8;                       /* Subtle visual separation */
+                opacity: 0.8;
                 font-size: calc(var(--fs-footer-copyright) * 0.9) !important;
             }
             .footer-domain {
                 font-size: calc(var(--fs-footer-domain) * 0.9) !important;
             }
-
-            /* PROCESS LIST: Stacks vertically */
-            .process-list li {
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-
-            /* TABLE: Tightens padding and prevents wrapping */
             .diagnostic-table td {
                 padding: 0.4rem 0.3rem;
             }
@@ -463,74 +446,55 @@
                 white-space: nowrap;
                 padding-left: 1rem;
             }
-
-            .header-right {
-                line-height: calc(1.4 * 0.85) !important;
-            }
-            .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.85) !important;
-            }
-            .header-right .location {
-                font-size: calc(var(--fs-location) * 0.85) !important;
-            }
-
-            .cta-box {
-                padding: calc(1.5rem * var(--low-icons-scale)) !important;
-            }
-
-            .header-right {
-                margin-bottom: 0.8rem;
-            }
+            .document { padding: 1.5rem; }
+            .cta-box { padding: calc(1.5rem * var(--low-icons-scale)) !important; }
+            .process-list li { flex-direction: column; gap: 0.2rem; }
+            .waste-findings-top-statement { margin-bottom: 0 !important; }
         }
+
         @media (max-width: 450px) {
             :root {
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
             .header-left h1 {
-                font-size: calc(1.5rem * 0.8) !important;
+                font-size: calc(1.6rem * var(--scale)) !important;
             }
             .header-left .subtitle {
-                font-size: calc(0.88rem * 0.8) !important;
+                font-size: calc(0.9rem * var(--scale)) !important;
             }
             .header-left img {
                 width: 65px;
                 height: 65px;
                 flex-shrink: 0;
             }
-            .header-left {
-                gap: 0.6rem !important;
-            }
+            .header-left { gap: 0.6rem !important; }
             .header-right {
                 margin-bottom: 1.1rem;
-            }
-
-            .header-right {
-                line-height: calc(1.4 * 0.85) !important;
+                line-height: calc(1.4 * var(--low-icons-scale)) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.85) !important;
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * 0.85) !important;
+                font-size: calc(var(--fs-location) * var(--scale)) !important;
             }
         }
+
         @media (max-width: 400px) {
             :root {
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
-            .header-left {
-                gap: 0.5rem !important;
-            }
+            .header-left { gap: 0.5rem !important; }
             .header-right {
-                line-height: calc(1.4 * 0.85) !important;
+                line-height: calc(1.4 * var(--low-icons-scale)) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.85) !important;
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * 0.85) !important;
+                font-size: calc(var(--fs-location) * var(--scale)) !important;
             }
         }
     </style>
