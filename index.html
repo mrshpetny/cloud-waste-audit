@@ -466,11 +466,17 @@
             .header-right .location {
                 font-size: calc(var(--fs-location) * 0.8) !important;
             }
+
+            .cta-box {
+                padding: calc(1.5rem * var(--low-icons-scale)) !important;
+            }
+            .cta-box .cta-title {
+                margin: 0 0 calc(0.3rem * var(--low-icons-scale)) 0 !important;
+            }
         }
         @media (max-width: 450px) {
             :root {
                 --scale: 0.85;
-                --low-icons-scale: 0.8;
             }
             .header-left h1 {
                 font-size: calc(1.6rem * var(--scale)) !important;
