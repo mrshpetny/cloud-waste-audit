@@ -51,7 +51,7 @@
       }
     }
     </script>
-    
+
     <style>
         :root {
             /* --- CORE TYPE SCALE --- */
@@ -59,7 +59,7 @@
             --fs-small: 0.85rem;      /* Badges, fine print, footer */
             --fs-medium: 1.15rem;     /* Headline & primary statements */
             --fs-large: 1.4rem;       /* Large headings (if used) */
-            
+
             --fs-location: 0.7rem;
             --fs-badge: 0.8rem;
             --fs-footer-domain: 0.75rem;
@@ -71,11 +71,11 @@
         }
 
         /* Map the variables to actual sizes */
-        .primary-statement { 
-            font-size: calc(var(--fs-large) * var(--scale)); 
+        .primary-statement {
+            font-size: calc(var(--fs-large) * var(--scale));
         }
-        .header-left h1 { 
-            font-size: calc(1.6rem * var(--scale)); 
+        .header-left h1 {
+            font-size: calc(1.6rem * var(--scale));
         }
         body, p, ul, li,
         .cta-box .cta-text,
@@ -86,7 +86,7 @@
         .gurantee-statement {
             font-size: calc(var(--fs-base) * var(--scale));
         }
-        p.headline-block, 
+        p.headline-block,
         .headline-block p {
             font-size: calc(var(--fs-medium) * var(--scale));
         }
@@ -95,16 +95,16 @@
             font-size: calc(var(--fs-small) * var(--scale))
         }
          .header-left .subtitle,
-        .waste-findings-top-statement, 
+        .waste-findings-top-statement,
         .waste-findings-bottom-statement,
-        .diagnostic-table td, 
+        .diagnostic-table td,
         .fine-print {
             font-size: calc(0.9rem * var(--scale));
         }
         .cta-box .cta-title {
             font-size: calc(1.1rem * var(--scale));
         }
-        
+
         /* Permanent variables */
         .header-right, .footer {font-size: var(--fs-small);}
         .header-right .location {font-size: var(--fs-location);}
@@ -184,19 +184,19 @@
         .header-right .domain:hover {
             opacity: 0.7;                     /* Subtle feedback without breaking the frame */
         }
-        
+
         .header-right .location {
             color: #6b7280;
             display: inline-block;
             margin-top: 0.2rem;
         }
         .headline-block {
-            font-weight: 600; 
-            color: #0b1f33; 
-            margin: 0 0 0.6rem 0; 
-            line-height: 1.3; 
-            border-bottom: 1px solid #e5e7eb; 
-            padding-bottom: 0.5rem; 
+            font-weight: 600;
+            color: #0b1f33;
+            margin: 0 0 0.6rem 0;
+            line-height: 1.3;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
             display: block;
         }
 
@@ -301,16 +301,16 @@
         /* -- CTA box -- */
         .cta-box {
             background: #f8fafc; border: 1px solid #dbe3ea; border-radius: 6px;
-            padding: 1.5rem;           
+            padding: 1.5rem;
             margin-top: 1.5rem;
         }
         .cta-box .cta-title {
             font-weight: 600; color: #0b1f33;
-            margin: 0 0 0.4rem 0;     
+            margin: 0 0 0.4rem 0;
         }
         .cta-box .cta-text { margin: 0; }
         .cta-box a { color: #0b1f33; font-weight: 600; text-decoration: none; border-bottom: 1px solid #0b1f33; }
-        
+
         /* -- Footer -- */
         .footer {
             border-top: 2px solid #0b1f33;
@@ -339,34 +339,34 @@
             min-width: 450px;          /* Forces the table to keep its full width */
         }
 
-        .waste-findings-top-statement, 
+        .waste-findings-top-statement,
         .waste-findings-bottom-statement {
             line-height: 1.6; /* Framing senteces */
         }
         .diagnostic-table td {
             line-height: 1.4; /* Packs the table into a dense spreadsheet */
         }
-        
+
         /* TIMELINE & CONDITIONS – Fine print */
         .fine-print {
             line-height: 1.6; /* Tighter for legal/conditional text */
         }
-        
-               @media (max-width: 600px) {
+
+        @media (max-width: 600px) {
             /* --- 1. GLOBAL SCALE OVERRIDE --- */
-            :root { 
-                --scale: 0.85; 
-                --low-icons-scale: 0.90; 
+            :root {
+                --scale: 0.85;
+                --low-icons-scale: 0.90;
             }
 
             /* --- 2. TEXT SCALING OVERRIDES (UNIFIED) --- */
-            .primary-statement { 
+            .primary-statement {
                 font-size: calc(var(--fs-large) * var(--scale)) !important;
             }
-            .header-left h1 { 
+            .header-left h1 {
                 font-size: calc(1.6rem * var(--scale)) !important;
             }
-            body, p, ul, li, .cta-box .cta-text, .process-list .step, .process-list .content, 
+            body, p, ul, li, .cta-box .cta-text, .process-list .step, .process-list .content,
             .problem-statement, .solution-statement, .gurantee-statement {
                 font-size: calc(var(--fs-base) * var(--scale)) !important;
             }
@@ -386,40 +386,15 @@
             /* Badges scale slightly less aggressively to avoid awkward wrapping */
             .badge-list { font-size: calc(var(--fs-small) * var(--low-icons-scale)) !important; }
             .badge-item { font-size: calc(var(--fs-badge) * var(--low-icons-scale)) !important; }
-            
+
             /* Force spacing adjustments */
             .waste-findings-top-statement { margin-bottom: 0 !important; }
 
             /* --- 3. LAYOUT & STRUCTURAL ADJUSTMENTS --- */
             .document { padding: 1.5rem; }
-            
-            /* HEADER: Keeps horizontal row, wraps internal elements if needed */
-            .header { 
-                display: flex; 
-                flex-direction: row; 
-                flex-wrap: wrap; 
-                align-items: center; 
-                justify-content: space-between; 
-                gap: 0.5rem; 
-            }
-            .header-left {
-                display: flex;
-                align-items: center;
-                gap: 0.7rem !important; 
-                flex: 1;
-            }
-            .header-left img { 
-                width: 75px; 
-                height: 75px; 
-                flex-shrink: 0; 
-            }
-            .header-right {
-                flex-shrink: 0; 
-                text-align: right;
-            }
 
-            /* FOOTER: Keeps horizontal row, wraps internal elements if needed */
-            .footer {
+            /* HEADER: Keeps horizontal row, wraps internal elements if needed */
+            .header {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -427,14 +402,50 @@
                 justify-content: space-between;
                 gap: 0.5rem;
             }
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem !important;
+                flex: 1;
+            }
+            .header-left img {
+                width: 75px;
+                height: 75px;
+                flex-shrink: 0;
+            }
+            .header-right {
+                flex-shrink: 0;
+                text-align: right;
+            }
+
+            /* FOOTER: Keeps horizontal row, wraps internal elements if needed */
+            .footer {
+                display: flex;
+                flex-direction: column !important;   /* Stack vertically on mobile */
+                align-items: flex-start !important;  /* Align everything to the left */
+                gap: 0.75rem !important;            /* Increase vertical spacing */
+                padding-top: 1.2rem !important;
+                font-size: calc(var(--fs-base) * var(--scale)) !important;
+            }
+
             .footer > div {
-                flex: 1 1 auto;
+                flex: none !important;              /* Do not grow/shrink – maintain natural width */
+                width: 100% !important;             /* Each block takes full width */
+            }
+
+            .footer .copyright {
+                margin-top: 0.25rem;
+                opacity: 0.8;                       /* Subtle visual separation */
+                font-size: calc(var(--fs-footer-copyright) * 0.9) !important;
+            }
+            .footer-domain {
+                font-size: calc(var(--fs-footer-domain) * 0.9) !important;
             }
 
             /* PROCESS LIST: Stacks vertically */
-            .process-list li { 
-                flex-direction: column; 
-                gap: 0.2rem; 
+            .process-list li {
+                flex-direction: column;
+                gap: 0.2rem;
             }
 
             /* TABLE: Tightens padding and prevents wrapping */
@@ -445,7 +456,7 @@
                 white-space: nowrap;
                 padding-left: 1rem;
             }
-            
+
             .header-right {
                 line-height: calc(1.4 * 0.8) !important;
             }
@@ -455,46 +466,25 @@
             .header-right .location {
                 font-size: calc(var(--fs-location) * 0.8) !important;
             }
-
-            .footer {
-                flex-direction: column !important;   /* Stack vertically on mobile */
-                align-items: flex-start !important;  /* Align everything to the left */
-                gap: 0.75rem !important;            /* Increase vertical spacing */
-                padding-top: 1.2rem !important;
-            }
-
-            .footer > div {
-                flex: none !important;              /* Do not grow/shrink – maintain natural width */
-                width: 100% !important;             /* Each block takes full width */
-            }
-
-            /* Separate the copyright line with a slight top margin */
-            .footer .copyright {
-                margin-top: 0.25rem;
-                opacity: 0.8;                       /* Subtle visual separation */
-            }
-            .footer {font-size: calc(var(--fs-base) * var(--scale));}
-            .footer-domain {font-size: calc(var(--fs-footer-domain) * 0.9);}
-            .copyright {font-size: calc(var(--fs-footer-copyright) * 0.9);}
         }
         @media (max-width: 450px) {
             :root {
                 --scale: 0.85;
                 --low-icons-scale: 0.8;
             }
-            .header-left h1 { 
+            .header-left h1 {
                 font-size: calc(1.6rem * var(--scale)) !important;
             }
             .header-left .subtitle {
                 font-size: calc(0.9rem * var(--scale));
             }
-            .header-left img { 
-                width: 65px; 
-                height: 65px; 
-                flex-shrink: 0; 
+            .header-left img {
+                width: 65px;
+                height: 65px;
+                flex-shrink: 0;
             }
             .header-left {
-                gap: 0.6rem !important; 
+                gap: 0.6rem !important;
             }
 
             .header-right {
@@ -512,7 +502,7 @@
                 --scale: 0.85;
             }
             .header-left {
-                gap: 0.5rem !important; 
+                gap: 0.5rem !important;
             }
             .header-right {
                 line-height: calc(1.4 * 0.8) !important;
@@ -561,7 +551,7 @@
                 </span>
             </p>
         </div>
-     
+
         <!-- 2. PROBLEM -->
         <div class="section">
             <div class="section-title">Problem</div>
@@ -600,7 +590,7 @@
         <div class="section">
             <div class="section-title">Waste Findings</div>
             <p class="waste-findings-top-statement" style="color: #4b5563; margin-bottom: 0.5rem;">
-                What we typically find across standard AWS environments ($15k–$50k monthly spend).
+                Typical waste patterns found in standard AWS environments ($15k–$50k monthly spend).
             </p>
             <div class="table-responsive">
                 <table class="diagnostic-table">
@@ -617,12 +607,13 @@
                     <tr class="total-row"><td class="label">Findings per audit (typical)</td><td class="value">~$4,532/mo</td></tr>
                 </table>
             </div>
-        
+
             <p class="waste-findings-bottom-statement" style="color: #4b5563; margin-bottom: 0.8rem;">
-                The table above represents typical waste patterns we have observed across multiple audits. Actual savings will be based on your defined scope and detailed in your custom report.
+                The table above reflects recurring waste patterns across multiple completed audits.
+                Actual savings will be based on your defined scope and detailed in your custom report.
             </p>
         </div>
-        
+
         <!-- 6. ENGAGEMENT PROTOCOL -->
         <div class="section">
             <div class="section-title">Engagement Protocol</div>
@@ -639,11 +630,11 @@
                 </li>
                 <li>
                     <span class="step">02.</span>
-                    <span class="content"><strong>Confirm the Scope</strong><br>Reply to the scope questions.</span>
+                    <span class="content"><strong>Confirm the Scope</strong><br>Reply to the scope questions to lock the engagement.</span>
                 </li>
                 <li>
                     <span class="step">03.</span>
-                    <span class="content"><strong>Execute the Agreement</strong><br>Sign the binding contract.</span>
+                    <span class="content"><strong>Execute the Agreement</strong><br>Sign the binding contract under AAA Arbitration and California law.</span>
                 </li>
                 <li>
                     <span class="step">04.</span>
@@ -662,7 +653,7 @@
                     <span class="content"><strong>Receive the Report</strong><br>The final report is delivered within 72 hours.</span>
                 </li>
             </ul>
-            
+
             <div class="cta-box">
                 <p class="cta-title">Ready to stop the bleeding?</p>
                 <p class="cta-text">Send "Audit" to <a href="mailto:alexey.shpetny.work@gmail.com">alexey.shpetny.work@gmail.com</a> with monthly AWS spend to begin.</p>
@@ -677,7 +668,6 @@
             </div>
         </div>
 
-        
         <!-- FOOTER -->
         <div class="footer">
             <div>
