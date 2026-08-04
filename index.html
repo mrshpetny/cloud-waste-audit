@@ -461,7 +461,6 @@
                 --scale: 0.8;
                 --low-icons-scale: 0.85;
             }
-            
             .header-left h1 { 
                 font-size: calc(1.6rem * var(--scale)) !important;
             }
@@ -470,15 +469,18 @@
                 height: 65px; 
                 flex-shrink: 0; 
             }
+            .header-left {
+                gap: 0.6rem !important; 
+            }
 
             .header-right {
-                line-height: calc(1.4 * var(--low-icons-scale)) !important;
+                line-height: calc(1.4 * var(--scale)) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * var(--low-icons-scale)) !important;
+                font-size: calc(var(--fs-small) * var(--scale)) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * var(--low-icons-scale)) !important;
+                font-size: calc(var(--fs-location) * var(--scale)) !important;
             }
         }
     </style>
