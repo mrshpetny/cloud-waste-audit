@@ -455,6 +455,24 @@
             .header-right .location {
                 font-size: calc(var(--fs-location) * 0.8) !important;
             }
+
+            .footer {
+                flex-direction: column !important;   /* Stack vertically on mobile */
+                align-items: flex-start !important;  /* Align everything to the left */
+                gap: 0.75rem !important;            /* Increase vertical spacing */
+                padding-top: 1.2rem !important;
+            }
+
+            .footer > div {
+                flex: none !important;              /* Do not grow/shrink – maintain natural width */
+                width: 100% !important;             /* Each block takes full width */
+            }
+
+            /* Separate the copyright line with a slight top margin */
+            .footer .copyright {
+                margin-top: 0.25rem;
+                opacity: 0.8;                       /* Subtle visual separation */
+            }
         }
         @media (max-width: 450px) {
             :root {
