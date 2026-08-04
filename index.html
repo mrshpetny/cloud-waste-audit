@@ -457,20 +457,37 @@
                 --scale: 0.87;
                 --low-icons-scale: 0.87;
             }
-            .header-left h1 {
-                font-size: calc(1.6rem * var(--scale)) !important;
+        
+            /* 1. Force the header to stack vertically to prevent wrapping */
+            .header {
+                display: flex;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.1rem !important; /* Keeps the container itself tight */
             }
-            .header-left .subtitle {
-                font-size: calc(0.9rem * var(--scale)) !important;
+        
+            /* 2. Make both blocks full width and remove the leftover margins */
+            .header-left, 
+            .header-right {
+                width: 100% !important;
+                flex: none !important;
+                margin-bottom: 0 !important; /* Kills the 1.1rem margin causing the gap */
+                text-align: left !important;
             }
+        
+            /* 3. Adjust the photo size and inner spacing */
             .header-left img {
                 width: 65px;
                 height: 65px;
                 flex-shrink: 0;
             }
-            .header-left { gap: 0.6rem !important; }
+            .header-left {
+                gap: 0.6rem !important;
+            }
+        
+            /* 4. Pull the domain up tight under the subtitle */
             .header-right {
-                margin-bottom: 1.1rem;
+                margin-top: 0.1rem !important; /* Snug against the title, no dead space */
                 line-height: calc(1.4 * var(--low-icons-scale)) !important;
             }
             .header-right .domain {
