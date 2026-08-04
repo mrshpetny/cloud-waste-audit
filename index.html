@@ -355,16 +355,13 @@
         @media (max-width: 600px) {
             /* --- 1. GLOBAL SCALE OVERRIDE --- */
             :root {
-                --scale: 0.85;
-                --low-icons-scale: 0.85;
+                --scale: 0.88;
+                --low-icons-scale: 0.88;
             }
 
             /* --- 2. TEXT SCALING OVERRIDES (UNIFIED) --- */
             .primary-statement {
                 font-size: calc(var(--fs-large) * var(--scale)) !important;
-            }
-            .header-left h1 {
-                font-size: calc(1.6rem * var(--scale)) !important;
             }
             body, p, ul, li, .cta-box .cta-text, .process-list .step, .process-list .content,
             .problem-statement, .solution-statement, .gurantee-statement {
@@ -373,7 +370,7 @@
             p.headline-block, .headline-block p {
                 font-size: calc(var(--fs-medium) * var(--scale)) !important;
             }
-            .section-title, .initiatation-stage-email {
+            .initiatation-stage-email {
                 font-size: calc(var(--fs-small) * var(--scale)) !important;
             }
             .header-left .subtitle, .waste-findings-top-statement, .waste-findings-bottom-statement,
@@ -392,6 +389,13 @@
 
             /* --- 3. LAYOUT & STRUCTURAL ADJUSTMENTS --- */
             .document { padding: 1.5rem; }
+            
+            .header-left h1 {
+                font-size: calc(1.6rem * 0.85) !important;
+            }
+            .section-title {
+                font-size: calc(var(--fs-small) * 0.85) !important;
+            }
 
             /* HEADER: Keeps horizontal row, wraps internal elements if needed */
             .header {
@@ -458,13 +462,13 @@
             }
 
             .header-right {
-                line-height: calc(1.4 * 0.8) !important;
+                line-height: calc(1.4 * 0.85) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.8) !important;
+                font-size: calc(var(--fs-small) * 0.85) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * 0.8) !important;
+                font-size: calc(var(--fs-location) * 0.85) !important;
             }
 
             .cta-box {
@@ -477,14 +481,14 @@
         }
         @media (max-width: 450px) {
             :root {
-                --scale: 0.85;
-                --low-icons-scale: 0.85;
+                --scale: 0.88;
+                --low-icons-scale: 0.88;
             }
             .header-left h1 {
-                font-size: calc(1.6rem * var(--scale)) !important;
+                font-size: calc(1.6rem * 0.8) !important;
             }
             .header-left .subtitle {
-                font-size: calc(0.9rem * var(--scale));
+                font-size: calc(0.9rem * 0.8) !important;
             }
             .header-left img {
                 width: 65px;
@@ -499,30 +503,31 @@
             }
 
             .header-right {
-                line-height: calc(1.4 * 0.8) !important;
+                line-height: calc(1.4 * 0.85) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.8) !important;
+                font-size: calc(var(--fs-small) * 0.85) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * 0.8) !important;
+                font-size: calc(var(--fs-location) * 0.85) !important;
             }
         }
         @media (max-width: 400px) {
             :root {
-                --scale: 0.85;
+                --scale: 0.88;
+                --low-icons-scale: 0.88;
             }
             .header-left {
                 gap: 0.5rem !important;
             }
             .header-right {
-                line-height: calc(1.4 * 0.8) !important;
+                line-height: calc(1.4 * 0.85) !important;
             }
             .header-right .domain {
-                font-size: calc(var(--fs-small) * 0.8) !important;
+                font-size: calc(var(--fs-small) * 0.85) !important;
             }
             .header-right .location {
-                font-size: calc(var(--fs-location) * 0.8) !important;
+                font-size: calc(var(--fs-location) * 0.85) !important;
             }
         }
     </style>
