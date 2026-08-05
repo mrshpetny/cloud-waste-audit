@@ -181,9 +181,6 @@
             transition: opacity 0.2s ease;
             text-decoration-color: #0b1f33;   /* Matches the brand color */
         }
-        .header-right .domain:hover {
-            opacity: 0.7;                     /* Subtle feedback without breaking the frame */
-        }
 
         .header-right .location {
             color: #6b7280;
@@ -531,6 +528,21 @@
             }
         }
     </style>
+
+    <style id="mobile-header-patch">
+        @media (max-width:600px){
+        .header{display:block!important;padding-bottom:1.2rem!important;}
+        .header-left{display:flex!important;align-items:center!important;gap:1rem!important;margin-bottom:1rem!important;flex:none!important}
+        .header-left img{width:82px!important;height:82px!important}
+        .header-left h1{font-size:1.55rem!important;line-height:1.1!important}
+        .header-left .subtitle{font-size:.95rem!important;line-height:1.25!important}
+        .header-right{display:block!important;text-align:left!important;margin:0!important}
+        .header-right br{display:none!important}
+        .header-right .location{display:inline!important;margin:0!important;color:#6b7280}
+        .header-right .location::before{content:" • ";color:#6b7280}
+        }
+    </style>
+
 </head>
 <body>
     <div class="document">
@@ -546,7 +558,7 @@
             </div>
             <div class="header-right">
                 <a href="https://mrshpetny.com" class="domain">mrshpetny.com</a><br>
-                <span class="location">California, USA</span><br>
+                <span class="location">California, USA</span>
             </div>
         </div>
 
@@ -699,4 +711,6 @@
 
     </div>
 </body>
+</html>
+
 </html>
