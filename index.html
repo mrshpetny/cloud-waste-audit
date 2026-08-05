@@ -443,12 +443,6 @@
                 font-size: calc(var(--fs-footer-domain) * 0.9) !important;
             }
 
-            /* PROCESS LIST: Stacks vertically */
-            .process-list li {
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-
             /* TABLE: Tightens padding and prevents wrapping */
             .diagnostic-table td {
                 padding: 0.4rem 0.3rem;
@@ -530,17 +524,17 @@
     </style>
 
     <style id="mobile-header-patch">
-        @media (max-width:600px){
-        .header{display:block!important;padding-bottom:1.2rem!important;}
-        .header-left{display:flex!important;align-items:center!important;gap:1rem!important;margin-bottom:1rem!important;flex:none!important}
-        .header-left img{width:82px!important;height:82px!important}
-        .header-left h1{font-size:1.55rem!important;line-height:1.1!important}
-        .header-left .subtitle{font-size:.95rem!important;line-height:1.25!important}
-        .header-right{display:block!important;text-align:left!important;margin:0!important}
-        .header-right br{display:none!important}
-        .header-right .location{display:inline!important;margin:0!important;color:#6b7280}
-        .header-right .location::before{content:" • ";color:#6b7280}
-        }
+    @media (max-width:600px){
+    .header{display:block!important;padding-bottom:1.2rem!important;}
+    .header-left{display:flex!important;align-items:center!important;gap:1rem!important;margin-bottom:1rem!important;flex:none!important}
+    .header-left img{width:82px!important;height:82px!important}
+    .header-left h1{font-size:1.55rem!important;line-height:1.1!important}
+    .header-left .subtitle{font-size:.95rem!important;line-height:1.25!important}
+    .header-right{display:block!important;text-align:left!important;margin:0!important}
+    .header-right br{display:none!important}
+    .header-right .location{display:inline!important;margin:0!important;color:#6b7280}
+    .header-right .location::before{content:" • ";color:#6b7280}
+    }
     </style>
 
 </head>
@@ -711,6 +705,4 @@
 
     </div>
 </body>
-</html>
-
 </html>
