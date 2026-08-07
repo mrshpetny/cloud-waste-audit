@@ -95,8 +95,8 @@
             font-size: calc(var(--fs-small) * var(--scale))
         }
          .header-left .subtitle,
-        .financial-report-top-statement,
-        .financial-report-bottom-statement,
+        .waste-findings-top-statement,
+        .waste-findings-bottom-statement,
         .diagnostic-table td,
         .fine-print {
             font-size: calc(0.9rem * var(--scale));
@@ -336,8 +336,8 @@
             min-width: 450px;          /* Forces the table to keep its full width */
         }
 
-        .financial-report-top-statement,
-        .financial-report-bottom-statement {
+        .waste-findings-top-statement,
+        .waste-findings-bottom-statement {
             line-height: 1.6; /* Framing senteces */
         }
         .diagnostic-table td {
@@ -373,7 +373,7 @@
             .initiatation-stage-email {
                 font-size: calc(var(--fs-small) * 0.85) !important;
             }
-            .header-left .subtitle, .financial-report-top-statement, .financial-report-bottom-statement,
+            .header-left .subtitle, .waste-findings-top-statement, .waste-findings-bottom-statement,
             .diagnostic-table td, .fine-print {
                 font-size: calc(0.9rem * var(--scale)) !important;
             }
@@ -390,7 +390,7 @@
             .badge-item { font-size: calc(var(--fs-badge) * var(--low-icons-scale)) !important; }
 
             /* Force spacing adjustments */
-            .financial-report-top-statement { margin-bottom: 0 !important; }
+            .waste-findings-top-statement { margin-bottom: 0 !important; }
 
             /* --- 3. LAYOUT & STRUCTURAL ADJUSTMENTS --- */
             .document { padding: 1.5rem; }
@@ -603,10 +603,10 @@
             </div>
         </div>
 
-        <!-- 5. FINANCIAL REPORT -->
+        <!-- 5. WASTE FINDINGS -->
         <div class="section">
-            <div class="section-title">Financial Report</div>
-            <p class="financial-report-top-statement" style="color: #4b5563; margin-bottom: 0.5rem;">
+            <div class="section-title">Waste Findings</div>
+            <p class="waste-findings-top-statement" style="color: #4b5563; margin-bottom: 0.5rem;">
                 Typical waste patterns found in standard AWS environments ($15k–$50k monthly spend).
             </p>
             <div class="table-responsive">
@@ -625,7 +625,7 @@
                 </table>
             </div>
 
-            <p class="financial-report-bottom-statement" style="color: #4b5563; margin-bottom: 0.8rem;">
+            <p class="waste-findings-bottom-statement" style="color: #4b5563; margin-bottom: 0.8rem;">
                 The table above reflects recurring waste patterns across multiple completed audits.
                 Actual savings will be based on your defined scope and detailed in your custom report.
             </p>
